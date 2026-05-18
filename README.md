@@ -394,4 +394,12 @@ $$
 
 ---
 
-## 十、如何运行
+## 十、运行依赖环境
+- Python 版本：**3.8.x**
+- KaiwuSDK 版本：**1.1.2**
+
+```bash
+pip install numpy==1.21.6
+pip install pandas==1.4.4
+pip install gurobipy==9.5.2
+pip install kaiwu==1.1.2
