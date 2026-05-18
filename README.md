@@ -296,7 +296,8 @@ $$
 - GPU：NVIDIA GeForce RTX 4060 Laptop
 - 内存：16GB
 - 量子硬件：玻色量子 CPQC-550 相干伊辛机
-- 开发框架：玻色量子 KaiwuSDK
+- 开发框架：玻色量子 KaiwuSDK1.1.2
+- python版本：3.8.x
 
 ---
 
