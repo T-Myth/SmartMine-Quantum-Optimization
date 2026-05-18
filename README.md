@@ -362,3 +362,36 @@ $$
 - 矿车配置：矿1型7辆、矿2型7辆、矿3型3辆（已提前采购）
 - 5年作业周期内最大收益：**60908.64 万元**
 
+---
+## 八、文件结构
+├── .gitignore
+├── LICENSE
+├── README.md
+├── 核心代码文件
+│   ├── qubo_model_builder.py          # 1. 建模生成原始QUBO
+│   ├── precision_analysis_spectral_gap.py  # 2. 谱间隙计算+最低精度m分析
+│   ├── qubo_integer_quantization.py   # 3. 整数等价QUBO量化
+│   ├── qubo_to_ising_preprocess.py    # 4. QUBO转Ising+变量拆分
+│   ├── precision_reduce_DR.py          # 5. 动态范围压缩辅助
+│   └── quantum_mining_final_solver.py # 6. 最终量子求解+结果解析
+├── 矩阵文件
+│   ├── QUBO.csv                       # 原始QUBO矩阵
+│   ├── DR_reduce_QUBO.csv             # 降DR后的QUBO
+│   ├── DR_reduce_QUBO_and_round.csv   # 整数化QUBO
+│   ├── Ising.csv                      # 原始Ising矩阵
+│   └── int_Ising.csv                  # 最终可直接上传真机的8bit整数Ising
+└── 结果与示意图
+    ├── GA1.png ~ GA9.png              # 遗传算法迭代过程图
+    ├── GA报告.png                     # 遗传算法结果报告
+    ├── 迭代图.png                     # 各求解方法迭代过程对比图
+    ├── 决策方案结果图.png             # 各算法最优配置方案对比图
+    └── 降低精度流程图.png             # 矩阵精度压缩算法流程图
+
+---
+## 九、如何运行
+若有新的算例，请按以下流程图对代码进行自行调节
+![降低精度流程图](guide.png)
+
+---
+
+## 十、如何运行
